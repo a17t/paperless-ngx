@@ -46,7 +46,7 @@ jobs:
           make html
       -
         name: Upload artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: documentation
           path: docs/_build/html/
@@ -207,7 +207,7 @@ jobs:
           docker cp frontend-extract:/usr/src/paperless/src/documents/static/frontend src/documents/static/frontend/
       -
         name: Upload frontend artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: frontend-compiled
           path: src/documents/static/frontend/
@@ -274,7 +274,7 @@ jobs:
           tar -cJf paperless-ngx.tar.xz paperless-ngx/
       -
         name: Upload release artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: release
           path: dist/paperless-ngx.tar.xz
